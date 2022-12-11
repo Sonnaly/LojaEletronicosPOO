@@ -1,0 +1,4 @@
+-Pode-se dividir a classe de teste em mais classes, 
+-Evitar o codigo duplicado que ocorrem em algumas classes 'Sistema', 
+-Refatorar para que a mudança de alguns pequenos métodos de uma classe não tenha um impacto tão grande nas demais classes.
+-mudar a implementação da classe de janela para que ela não fique sobrecarregada com as funçoes da classe sistema
