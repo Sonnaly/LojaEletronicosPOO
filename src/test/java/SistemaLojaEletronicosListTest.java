@@ -13,7 +13,20 @@ class SistemaLojaEletronicosListTest {
         assertEquals("0000", produto.getCodigo());
 
         //testa pesquisa
-        sistema.pesquisarProduto("0000");
+        try{
+            sistema.pesquisarProduto("0000");
+        }catch(ProdutoNaoExisteException e){
+            fail("O produto deveria existir no sistema")
+        }
+        
+        //testa apagar
+        sistema.apagarProduto("0000");
+        try{
+            sistema.pesquisarProduto("0000");
+            fail("Deveria falhar pois o produto deveria ter sido apagado do sistema")
+        }catch(ProdutoNaoExisteException e){
+            fail("Produto apagado!")
+        }
 
     }
 }
